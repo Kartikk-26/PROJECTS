@@ -1,0 +1,43 @@
+.wave {
+  width: 25vw;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.wave-child {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  width: 2.25vw;
+  height: 2.25vh;
+  border-radius: 2px;
+  background-color: var(--green);
+  -webkit-animation: wave 1s infinite ease-in-out alternate;
+          animation: wave 1s infinite ease-in-out alternate;
+  box-shadow: 0 0 1px var(--green);
+}
+
+.wave-left {
+  transform: rotateX(75deg) rotateZ(-30deg);
+}
+
+.wave-right {
+  transform: translateX(50px) rotateX(75deg) rotateZ(30deg) rotateY(5deg);
+}
+
+@-webkit-keyframes wave {
+  0% {
+    background-color: var(--green);
+    height: 8px;
+  }
+  100% {
+    background-color: var(--bg);
+    height: 40px;
+  }
+}
+
+

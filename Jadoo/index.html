@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadoo</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <audio id="b" src="./assets/B.mp3"></audio>
+    <audio id="c" src="./assets/C.mp3"></audio>
+    <audio id="d" src="./assets/D.mp3"></audio>
+    <audio id="e" src="./assets/E.mp3"></audio> 
+    <audio id="f" src="./assets/F.mp3"></audio>
+
+    <div id="start">
+      <img src="assets/images/retroSpace.png" alt="bg-for-start" />
+      <button id="enter" class="enter">PRESS ENTER TO CONTINUE</button>
+    </div>
+
+    <div id="computer">
+      <header></header>
+      <main id="container">
+        <section>
+          SENDING
+          <div class="wave wave-left"></div>
+        </section>
+        <section>
+          RECEIVING
+          <div class="wave wave-right"></div>
+        </section>
+
+        <section id="eclipse">
+          <div class="circle big outer"></div>
+          <div class="outer-small">
+            <div class="circle small small1"></div>
+            <div class="circle small small2"></div>
+          </div>
+          <div class="circle big reverse-outer"></div>
+          <div class="circle small-outer"></div>
+          <div class="circle dot"></div>
+        </section>
+        <section>
+          <pre>
+UPLINK  =  YES
+AXIS    =  40
+INC     =  49 POS+
+DEC     =  73 NEG-
+                    
+                    
+SIGNAL  =  80 B            
+            </pre
+          >
+          <pre>
+B:066
+C:067
+D:068
+E:069
+F:070
+            </pre
+          >
+        </section>
+      </main>
+
+      <div class="vertical-bar"></div>
+      <div class="horizontal-bar"></div>
+      <footer>
+        <div>PRESS KEYS:&nbsp;</div>
+        <div id="sound-btn">
+          <button>B</button>
+          <button>C</button>
+          <button>F</button>
+          <button>E</button>
+          <button>B</button>
+          <button>C</button>
+          <button>E</button>
+          <button>D</button>
+          <button>B</button>
+          <button>C</button>
+          <button>F</button>
+          <button>E</button>
+          <button>D</button>
+          <button>C</button>
+        </div>
+        <div class="credits">
+          By Techno
+
+          <a
+            href="https://github.com/Kartikk-26"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/images/github-mark-white.svg" alt="g-icon" />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script type="module" src="app.js"></script>
+</html>

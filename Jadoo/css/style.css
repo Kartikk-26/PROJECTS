@@ -1,0 +1,207 @@
+@import "/css/animations.css";
+@import "/css/circle.css";
+@import "/css/wave.css";
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+:root {
+  --bg: rgba(0, 83, 0, 0.8);
+  --fg: rgb(135, 205, 0);
+  --fg-shadow: rgb(177, 253, 0, 0.8);
+  --red: red;
+  background-color: black;
+}
+
+* {
+  font-family: "VT323";
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+}
+
+
+
+/* Front Page */
+
+#start {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start img {
+  will-change: opacity ;
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  -webkit-filter: blur(5px) hue-rotate(-45deg);
+  filter: blur(5px) hue-rotate(-45deg);
+  z-index: -1;
+}
+
+.enter {
+  all: unset;
+  position: absolute;
+  font-size: 4rem;
+  background-color: black;
+  padding: 2rem;
+  color: var(--fg);
+  text-shadow: 0 0 5px var(--fg-shadow);
+  cursor: pointer;
+  box-shadow: 10px 10px 0 var(--fg-shadow);
+}
+
+#start button:active {
+  transform: translateX(5px) translateY(5px);
+  box-shadow: 5px 5px 0 var(--fg-shadow);
+}
+
+.active {
+  transform: translateX(5px) translateY(5px) !important;
+  box-shadow: 5px 5px 0 var(--fg-shadow) !important;
+}
+
+.slide-up {
+  -webkit-animation: slide-up .5s linear forwards;
+  animation: slide-up .5s linear forwards;
+}
+
+.slide-down {
+  -webkit-animation: slide-down .5s linear ;
+  animation: slide-down .5s linear ;
+}
+
+/* main page */
+
+header {
+  margin: 0 1rem 0 auto;
+  height: 50px;
+}
+
+.credits {
+  margin-left: auto;
+  color: var(--red);
+}
+
+footer img {
+  width: 30px;
+  cursor: pointer;
+}
+
+#computer {
+  will-change: transform ;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(0deg);
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  background-image: url("../assets/images/bezel.png"),
+    url("../assets/images/scanlines.png");
+  background-size: 100% 100%;
+  background-color: var(--bg);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  min-height: 100%;
+  padding: 1rem;
+}
+
+section {
+  color: var(--fg);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+  max-width: 100%;
+  padding: 1rem 3rem 0;
+}
+
+section:first-child {
+  padding-left: 5rem;
+}
+
+section:nth-child(-n + 2) {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+}
+
+section:last-child {
+  display: flex;
+  font-size: calc(1vw + 16px);
+}
+
+.vertical-bar,
+.horizontal-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  z-index: 1;
+}
+
+.vertical-bar {
+  height: 100vh;
+  width: 20px;
+}
+
+.horizontal-bar {
+  height: 20px;
+  width: 100vw;
+}
+
+footer {
+  padding: 0 3rem;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+footer div:first-child {
+  /* color: var(--green); */
+  -webkit-animation: color-change 2s infinite;
+  animation: color-change 2s infinite;
+  color: var(--fg);
+  text-shadow: 0 0 3px rgba(60, 60, 60, 0.8);
+}
+
+footer button {
+  all: unset;
+  font-size: 2rem;
+  color: var(--red);
+  text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+footer button:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
+
+footer button:active {
+  transform: scale(1);
+  text-shadow: 0 0 3px rgba(255, 0, 0, 0.8);
+}
+
+.active-btn {
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+}
