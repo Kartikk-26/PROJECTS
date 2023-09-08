@@ -1,0 +1,110 @@
+:root {
+	--gameSize: 21.7rem;
+	--iconSize: 3rem;
+	--rounding: 5px;
+	--fontSize: .8rem;
+	/* COlORS */
+	--bg: #4a4a4a;
+	--fg: #fff;
+	--btn: #ff4151;
+	--btnShadow: red;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+}
+
+main,
+footer {
+	color: gray;
+	display: flex;
+	column-gap: 2rem;
+	align-items: center;
+	justify-content: center;
+}
+
+#game__grid {
+	width: var(--gameSize);
+	height: var(--gameSize);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-content: space-evenly;
+	justify-items: center;
+	box-shadow: inset 0 0 0 2px black;
+	background-color: white;
+}
+
+.game__child {
+	display: flex;
+	width: calc((var(--gameSize) - .5rem) / 3);
+	height: calc((var(--gameSize) - .5rem) / 3);
+	font-size: var(--iconSize);
+	cursor: default;
+	user-select: none;
+	background-color: black;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+footer {
+	font-size: var(--fontSize);
+
+}
+
+footer:hover {
+	cursor: pointer;
+	user-select: none;
+}
+
+footer div:hover {
+	color: white;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--gameSize: 33rem;
+		--fontSize: 1rem;
+		--iconSize: 5rem;
+	}
+}
+
+/* javascript classes */
+
+.highlight {
+	color: white;
+}
+
+.visibile {
+	visibility: visible;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.blink {
+	animation: blink-anim .6s;
+}
+
+@keyframes blink-anim {
+	0%, 66.6% {
+		font-size: var(--iconSize);
+	}
+
+	33.3%, 100% {
+		font-size: 0rem;
+	}
+}
