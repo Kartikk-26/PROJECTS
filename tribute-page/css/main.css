@@ -1,0 +1,316 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/**************************************************************************************
+            Carousel 
+            Reference: 
+            1. https://www.sitepoint.com/full-screen-bootstrap-carousel-random-initial-image/
+            2. https://www.sitepoint.com/bootstrap-carousel-with-css3-animations/
+***************************************************************************************/
+/* Full-Screen Slide show */
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Carousel Caption customisation */
+.carousel-caption {
+	top:auto;
+	width:auto;
+	right:auto;
+	bottom:60px;
+	left:0;
+	padding:20px;
+	text-align:left;
+  	height:auto;
+	max-width:50%;
+}
+.carousel-caption h3 {
+    display: inline-block;
+    padding: 10px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(43, 27, 23,1);
+    color: rgb(255,64,0);
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control {
+	background:	rgba(0,0,0,0.7);
+	color:rgb(255,64,0);
+	padding: 4px 0;
+	width:26px;
+	top:auto;	
+	left:auto;
+	bottom:12px;
+	opacity:0.85;
+}
+.carousel-control.right {
+	right:10px;
+}
+.carousel-control.left {
+	right: 46px;
+}
+.carousel-indicators {
+	bottom:5px;
+	left:0;
+	width:auto;
+	padding:5px 25px 5px 25px;
+	margin-left:0;
+	background:rgba(0,0,0,0.7);
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:8px;
+	height:8px;
+	background:#fff;
+}
+.carousel-indicators .active {
+	width:10px;
+	height:10px;
+	background:rgb(255,64,0);
+	border-color:rgb(255,64,0);
+}
+
+/**************************************************************************************
+            Collapsable Menu
+***************************************************************************************/
+@media screen and (max-width: 1600px) {
+    .navbar-header {
+        float: right;
+    }
+    .navbar-toggle {
+        display: block;
+        margin: auto;
+        border-color: rgb(255,64,0) !important;
+        transition: transform .50s, background-color 1s ease;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-collapse.in {
+        overflow-y: auto;
+
+    }
+    .collapse.in {
+        display: block !important;
+        /*transform: rotateZ(360deg);*/                    
+        transform: rotate3d(1,1,1,-360deg);
+    }
+    .navbar-collapse {
+        position: absolute;
+        right: 120%;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.7);
+        max-height: 340px;
+        padding: 10px;
+        border-radius: 4px;
+        transition: transform 500ms;
+        overflow-x: hidden;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+}
+.navbar {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    margin: 5px; 
+    min-height: 0;
+    padding: 10px;
+    background:rgba(0,0,0,0.7);
+    perspective: 1000px;
+}
+.topnav .navbar-toggle .icon-bar {
+    background-color: rgb(255,64,0);
+}
+.navbar:hover,
+.navbar:focus,
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+    background-color: rgba(0,0,0,0.4);
+}
+.active-toggle {
+    transform: rotate(180deg);
+}
+.active-toggle .one {
+    transform: translateY(6px) translateX(0) rotate(45deg);
+}
+.active-toggle .two {
+    opacity: 0;
+}
+.active-toggle .three {
+    transform: translateY(-6px) translateX(0) rotate(-45deg);
+}
+.navbar-nav li a {
+    color: rgb(255,255,255) !important;
+}
+.navbar-nav li.active a,
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+    background-color: rgba(255,64,0,0.4) !important;
+}
+.navbar-collapse:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 100%;
+    bottom: 10%;
+    border: 10px solid transparent;
+    border-left: 10px solid rgba(0,0,0,0.7);
+}
+@media screen and (max-width: 767px) {
+    .navbar-collapse.in {
+        overflow-y: visible;   
+    } 
+    .navbar-nav {
+        margin: 1px;
+    }
+}
+
+/**************************************************************************************
+            MSD Section, Personal Section, Achivements Section
+***************************************************************************************/
+.msd-img {
+    height: 350px;
+    width: 400px;
+}
+.intro, .more-info, .pers-life, .achivement {
+    font-size: 18px;
+    margin: 25px;
+}
+@media screen and (max-width: 479px) {
+    .msd-img {
+        height: 75%;
+        width: 75%;
+    }
+}
+/**************************************************************************************
+            MSD Section
+***************************************************************************************/
+/**************************************************************************************
+            Personal Section
+***************************************************************************************/
+/**************************************************************************************
+            Achivements Section
+***************************************************************************************/
+ul {
+    list-style-image: url("/img/icon.gif");
+    font-size: 18px;
+    margin: -15px 0;
+}
+li {
+    margin: 2px;
+}
+/**************************************************************************************
+           Gallery Section
+***************************************************************************************/
+img.gall {
+  filter: gray; 
+  -webkit-filter: grayscale(1); 
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    border: 2px solid rgba(0,0,0,0.5);
+    padding: 5px;
+    margin-bottom:20px;
+     -webkit-transition: -webkit-transform .15s linear;
+    transition: transform .15s linear;
+}
+img.gall:hover {
+    -webkit-filter: grayscale(0); 
+                 filter: none; 
+    transform: scale(2) rotate(0deg) !important;
+    position: relative;
+    z-index: 5;
+}
+@media screen and (max-width: 990px) {
+    img.gall {
+        height: 75%;
+        width: 75%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#gallery img.gall {
+    -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+                   transform: rotate(-15deg);
+}
+#gallery .col-md-3:nth-child(odd) img.gall {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+  position: relative;
+  top: 20px;
+    left: 200px;
+}
+#gallery .col-md-3:nth-child(2n) img.gall {
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+    transform: rotate(20deg);
+    position: relative;
+}
+#gallery .col-md-3:nth-child(3n) img.gall {
+  -webkit-transform: none;
+  -moz-transform: none;
+    transform: none;
+  position: relative;
+  top: 50px;
+    left: -190px;
+}
+#gallery .col-md-3:nth-child(4n) img.gall {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  position: relative;
+  left: -250px;
+    bottom: 30px;
+}
+/**************************************************************************************
+           Footer Section
+***************************************************************************************/
+footer {
+    background-color: #DCDCDC;
+    font-weight: 800;
+}
+
+/**************************************************************************************
+           Sticky Menu Section
+***************************************************************************************/
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    margin: 0;
+    z-index: 10;
+    perspective: initial;
+}
+.sticky-navbar-header {
+    display: none;
+}
+.sticky-navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    display: block!important;
+    visibility: visible!important;
+}
+.sticky-ul {
+    float:none;
+    margin: auto;
+    width: 55%;
+}
+.sticky-li {
+    float: left!important;    
+}
+
+
